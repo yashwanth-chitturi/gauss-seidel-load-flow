@@ -1,0 +1,97 @@
+
+              GAUSS-SEIDEL LOAD FLOW ANALYSIS
+
+SYSTEM INFORMATION
+Number of buses              : 4
+Number of transmission lines : 4
+Slack bus                    : 1
+PQ buses                     : 3 4 
+PV buses                     : 2 
+Acceleration factor (alpha) : 1.20
+Convergence tolerance       : 1.0e-05
+Maximum iterations          : 100
+
+                         Y-BUS MATRIX
+    5.724138 -12.310345i      -1.724138 +4.310345i       0.000000 +0.000000i      -4.000000 +8.000000i   
+   -1.724138 +4.310345i       4.224138 -11.810345i      -2.500000 +7.500000i       0.000000 +0.000000i   
+    0.000000 +0.000000i      -2.500000 +7.500000i       4.386792 -14.103774i      -1.886792 +6.603774i   
+   -4.000000 +8.000000i       0.000000 +0.000000i      -1.886792 +6.603774i       5.886792 -14.603774i   
+
+                    GAUSS-SEIDEL ITERATION
+ Iteration    Maximum Voltage Change
+         1          6.3253855453e-02
+         2          4.8553370510e-02
+         3          3.1661008750e-02
+         4          9.6379110449e-03
+         5          3.7002218875e-03
+         6          1.3140694171e-03
+         7          4.9338127705e-04
+         8          1.8263486027e-04
+         9          6.8019346677e-05
+        10          2.5322084468e-05
+        11          9.4331099947e-06
+
+RESULT: LOAD FLOW CONVERGED SUCCESSFULLY
+Number of iterations = 11
+Final maximum voltage change = 9.433110e-06 pu
+
+                         BUS RESULTS
+   Bus       Type       |V| (pu)      Angle (deg)         P (pu)         Q (pu)
+     1      Slack       1.050000         0.000000       1.653106       0.429161
+     2         PV       1.000000        -7.003622      -0.449961       0.335138
+     3         PQ       0.957522        -7.548417      -0.510002      -0.249994
+     4         PQ       0.968405        -4.525564      -0.600005      -0.299999
+
+                    FINAL COMPLEX VOLTAGES
+   Bus            Real(V)            Imag(V)
+     1         1.05000000         0.00000000
+     2         0.99253844        -0.12193209
+     3         0.94922458        -0.12578391
+     4         0.96538535        -0.07641089
+
+                       SLACK BUS POWER
+Slack Bus = 1
+P_slack   = 1.65310611 pu
+Q_slack   = 0.42916128 pu
+
+                         LINE FLOWS
+  From     To            Pij            Qij            Pji            Qji
+     1      2       0.655873       0.039324      -0.624547       0.038992
+     1      4       0.997233       0.389837      -0.945240      -0.285851
+     2      3       0.174586       0.296147      -0.169858      -0.281965
+     3      4      -0.340143       0.031970       0.345235      -0.014148
+
+                    TRANSMISSION LOSSES
+  From     To      P Loss (pu)        Q Loss (pu)
+     1      2       0.03132632         0.07831580
+     1      4       0.05199306         0.10398611
+     2      3       0.00472732         0.01418195
+     3      4       0.00509220         0.01782270
+Total Real Power Loss     = 0.09313889 pu
+Total Reactive Power Loss = 0.21430656 pu
+
+                        POWER BALANCE
+Total Generation = 1.65310611 pu
+Total Load       = 1.55996722 pu
+Total Loss       = 0.09313889 pu
+Generation - Load = 0.09313889 pu
+
+Power balance error = 5.551e-17 pu
+
+                         KEY RESULTS
+Load-flow status          : CONVERGED
+Number of iterations      : 11
+Final voltage deviation   : 9.433110e-06 pu
+Acceleration factor       : 1.20
+Convergence tolerance     : 1.0e-05
+
+Slack bus generation:
+    P = 1.653106 pu
+    Q = 0.429161 pu
+
+Transmission losses:
+    P_loss = 0.093139 pu
+    Q_loss = 0.214307 pu
+
+Power balance error       : 5.551e-17 pu
+                         PROGRAM END
